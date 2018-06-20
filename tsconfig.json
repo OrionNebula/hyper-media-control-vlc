@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "inlineSourceMap": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "declaration": true,
+        "target": "es5",
+        "moduleResolution": "node",
+        "lib": [
+            "es6",
+            "es5"
+        ]
+    }
+}

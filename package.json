@@ -1,12 +1,12 @@
 {
   "name": "hyper-media-control-vlc",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Extends hyper-media-control with support for VLC media player.",
-  "main": "dist/index.js",
+  "main": "dist/index",
   "scripts": {
-    "lint": "standard ./src/**.js | snazzy",
+    "lint": "tslint --config tslint.json --project .",
     "prebuild": "npm run lint && rimraf ./dist",
-    "build": "babel src -d dist",
+    "build": "tsc",
     "prepublishonly": "npm run build"
   },
   "keywords": [
@@ -19,14 +19,16 @@
   "author": "Olivia Trewin",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "@types/request": "^2.47.1",
+    "@types/xml2js": "^0.4.3",
     "rimraf": "^2.6.2",
-    "snazzy": "^7.1.1",
-    "standard": "^11.0.1"
+    "tslint": "^5.10.0",
+    "tslint-config-standard": "^7.0.0",
+    "typescript": "^2.9.2"
   },
   "dependencies": {
-    "hyper-plugin-extend": "1.0.0",
+    "hyper-media-control": "^1.5.3",
+    "hyper-plugin-extend": "^1.1.1",
     "request": "^2.85.0",
     "xml2js": "^0.4.19"
   }
